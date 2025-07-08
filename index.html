@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend + Backend</title>
+</head>
+
+<body>
+    <h1>This is my html page</h1>
+    <button onclick="callBackend()">Call Backend</button>
+    <p id="response"></p>
+
+    <script>
+        async function callBackend() {
+            const res = await fetch('/api/message');
+            const text = await res.text();
+            document.getElementById('response').innerText = text;
+        }
+    </script>
+</body>
+
+</html>

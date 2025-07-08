@@ -9,7 +9,6 @@ let serverDirectCount = 0;
 const serverCoutMiddleware = (req, res, next) => {
     serverDirectCount = serverDirectCount + 1;
     next()
-
 }
 
 app.get("/", (req, res) => {
